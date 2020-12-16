@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Mirrored from www.bikeseoul.com/customer/opinionBoard/opinionBoardList.do by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Aug 2019 10:54:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=medium-dpi" name="viewport">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>서울자전거 따릉이 - 무인대여시스템</title>
+<link href="../../css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../../js/easing/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../js/gibberish-aes.js"></script>
+<script type="text/javascript" src="../../js/jquery.simpler-sidebar.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-confirm.js"></script>
+<script type="text/javascript" src="../../js/comm.js"></script>
+<script type="text/javascript" src="../../js/common_spb.js"></script>
+
+<link rel="stylesheet" href="../../css/style_kr_v2.css" type="text/css">
+<link rel="stylesheet" href="../../css/common.css" type="text/css">
+<link rel="stylesheet" href="../../css/jquery-confirm.css">
+<!--[if lt IE 9]>
+<link href="/css/pw.css" title="ie8chn" rel="stylesheet" type="text/css" />
+<script src="/js/html5.js"></script>
+<script src="/js/respond.min.js"></script>
+<![endif]-->
+<script src="../../js/repond.min.html"></script>
+<script type="text/javaScript">
+	var msg = '';
+	if(msg == 'secretY'){
+		alert('비공개');
+	}
+	function linkPage(pageNo){ location.href = "/customer/opinionBoard/opinionBoardList.do?currentPageNo="+pageNo+""; }
+</script>
+</head>
+<body>
+
+<div class="wrap board">
+
+	<!--웹 : 헤더추가-->
+    <div class="header_wrap">
+        <div class="header">
+            <div class="top">
+            	<div class="setting">
+					<ul>
+						<li class="mainTypeText" id="textBtn"><a href="javascript:changeMainType('text');">텍스트</a></li>
+						<li class="mainTypeMap" id="mapBtn"><a href="javascript:changeMainType('map');">지도</a></li>
+					</ul>
+				</div>
+                <div class="info"><a href="../../info/infoReg.html">이용안내</a></div>
+                <div class="alim"><a href="../../login.html">알림</a></div>
+                <a class="join" href="../../memberRegSelect3e43.html?appOsType=">회원가입</a>
+						<a class="login" href="../../login.html">로그인</a>
+					<div class="global" id="changeLang">
+                    <ul>
+                        <li class="en"><a href="https://www.bikeseoul.com:447/main.do?lang=en">ENGLISH</a></li>
+                        <li class="ch"><a href="https://www.bikeseoul.com:447/main.do?lang=zh">中國語</a></li>
+                        <li class="ja"><a href="https://www.bikeseoul.com:447/main.do?lang=ja">日本語</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo"><a href="../../main.html"><img src="../../images/logo.png" alt="서울자전거 따릉이"></a></div>
+
+            <!--메뉴(웹)-->
+            <div class="menu_web">
+                <ul>
+                    <li><a href="../../main.html#bike_info">사업소개</a></li>
+                    <li><a href="../../app/station/moveStationRealtimeStatus.html">대여소 조회</a></li>
+                    <li><a href="../../login.html">이용권 구매</a></li>
+                    <li><a href="opinionBoardList.html">시민의견수렴</a></li>
+                    <li><a href="../notice/noticeList.html">공지사항</a></li>
+                    <li><a href="../faq/faqList.html">안전수칙</a></li>
+                </ul>
+            </div>
+            <button id="showRight" class="menu_app"></button>
+            <!--메뉴(웹)-->
+        </div>
+    </div>
+    <!--웹 : 헤더추가--><div class="container">
+    	<div class="content">
+
+        <div class="board">
+            <div class="top">
+                <h3>시민의견수렴</h3>
+                <button class="back right"></button>
+                <button class="close"></button>
+            </div>
+
+            <div class="board_srch">
+            <form id="frm" name="frm" action="https://www.bikeseoul.com/customer/opinionBoard/opinionBoardList.do" accept-charset="utf-8">
+				<div class="input w70"><input type="text" class="w100" id="searchValue" name="searchValue" placeholder="검색어를 입력해주세요" value=""></div>
+                <div class="btn_search"><a href="#" id="searchButton" name="searchButton"><img src="../../images/ic_search.png" alt="">검색</a></div>
+            </form>
+            </div>
+
+            <div class="board_box">
+            	<table>
+                	<colgroup>
+                        <col width="50%">
+                        <col width="25%">
+                        <col width="25%">
+                    </colgroup>
+                	<tr>
+                    	<th class="center">제목</th>
+                        <th class="center">답변상태</th>
+                        <th class="center">아이디</th>
+                    </tr>
+                    <tr>
+								<td class="left"><a href="opinionBoardView6d83.html?usrQnaSeq=56622&amp;currentPageNo=1">
+											물량이 없어요. 배치 좀 원활히 부탁드립니다</a>
+										<!-- 추가 : 비밀글 접근 제어 하기 위해_2016.04.21_by_JHN -->
+										<input type="hidden" id="secretYN_0" name="secretYN_0" value="N"/>
+										<input type="hidden" id="usrSessIDCnt_0" name="usrSessIDCnt_0" value="0"/>
+										<!-- 끝 : 비밀글 접근 제어 하기 위해_2016.04.21_by_JHN -->
+								</td>
+								<td>
+									답변대기</td>
+								<!--[if gt IE 8]><!--><td>bo*******</td><!--<![endif]-->
+							</tr>
+						<tr>
+								<td class="left"><a href="opinionBoardView9034.html?usrQnaSeq=56617&amp;currentPageNo=1">
+											중계역 부근 전체 따릉이 보급률 좀 늘려주세요..</a>
+										<!-- 추가 : 비밀글 접근 제어 하기 위해_2016.04.21_by_JHN -->
+										<input type="hidden" id="secretYN_1" name="secretYN_1" value="N"/>
+										<input type="hidden" id="usrSessIDCnt_1" name="usrSessIDCnt_1" value="0"/>
+										<!-- 끝 : 비밀글 접근 제어 하기 위해_2016.04.21_by_JHN -->
+								</td>
+								<td>
+									답변대기</td>
+								<!--[if gt IE 8]><!--><td>an*******</td><!--<![endif]-->
+							</tr>
+						<tr>
+								<td class="left"><a href="opinionBoardViewe7c6.html?usrQnaSeq=56598&amp;currentPageNo=1">
+											고장신고 방법 개선, 카드 등록 일원화</a>
+										<!-- 추가 : 비밀글 접근 제어 하기 위해_2016.04.21_by_JHN -->
+										<input type="hidden" id="secretYN_2" name="secretYN_2" value="N"/>
+										<input type="hidden" id="usrSessIDCnt_2" name="usrSessIDCnt_2" value="0"/>
+										<!-- 끝 : 비밀글 접근 제어 하기 위해_2016.04.21_by_JHN -->
+								</td>
+								<td>
+									답변대기</td>
+								<!--[if gt IE 8]><!--><td>ar**********</td><!--<![endif]-->
+							</tr>
+						<tr>
+								<td class="left"><a href="opinionBoardView59d7.html?usrQnaSeq=56593&amp;currentPageNo=1">
+											따릉이 사용 후 자전거일련번호에 대해 자전거상태 후기로 남겨 수리 토록 해주세요</a>
+										<!-- 추가 : 비밀글 접근 제어 하기 위해_2016.04.21_by_JHN -->
+										<input type="hidden" id="secretYN_3" name="secretYN_3" value="N"/>
+										<input type="hidden" id="usrSessIDCnt_3" name="usrSessIDCnt_3" value="0"/>
+										<!-- 끝 : 비밀글 접근 제어 하기 위해_2016.04.21_by_JHN -->
+								</td>
+								<td>
+									답변대기</td>
+								<!--[if gt IE 8]><!--><td>sa****</td><!--<![endif]-->
+							</tr>
+						<tr>
+								<td class="left"><a href="opinionBoardView25fb.html?usrQnaSeq=56591&amp;currentPageNo=1">
+											홈페이지를 통한 이용방법 복잡</a>
+										<!-- 추가 : 비밀글 접근 제어 하기 위해_2016.04.21_by_JHN -->
+										<input type="hidden" id="secretYN_4" name="secretYN_4" value="N"/>
+										<input type="hidden" id="usrSessIDCnt_4" name="usrSessIDCnt_4" value="0"/>
+										<!-- 끝 : 비밀글 접근 제어 하기 위해_2016.04.21_by_JHN -->
+								</td>
+								<td>
+									답변대기</td>
+								<!--[if gt IE 8]><!--><td>mr******</td><!--<![endif]-->
+							</tr>
+						</table>
+            </div>
+			<div class="paging">
+				<div id="pagingWeb" class="num">
+					<a href="#" onclick="linkPage(1); return false;"><img src="../../images/first.gif" alt="맨 처음 페이지" /></a>
+<a href="#" onclick="linkPage(1); return false;"><img src="../../images/p_prev.gif" alt="이전 페이지" /></a>
+<span class="on"><a href="#"><strong>1</strong></a></span>
+<span><a href="#" onclick="linkPage(2); return false;">2</a></span>
+<span><a href="#" onclick="linkPage(3); return false;">3</a></span>
+<a href="#" onclick="linkPage(6); return false;"><img src="../../images/p_next.gif" alt="다음 페이지" /></a>
+<a href="#" onclick="linkPage(1771); return false;"><img src="../../images/last.gif" alt="마지막 페이지" /></a>
+
+</div>
+				<div id="pagingMobile" class="num">
+					<a href="#" onclick="linkPage(1); return false;"><img src="../../images/first.gif" alt="맨 처음 페이지" /></a>
+<a href="#" onclick="linkPage(1); return false;"><img src="../../images/p_prev.gif" alt="이전 페이지" /></a>
+<span class="on"><a href="#"><strong>1</strong></a></span>
+<span><a href="#" onclick="linkPage(2); return false;">2</a></span>
+<span><a href="#" onclick="linkPage(3); return false;">3</a></span>
+<a href="#" onclick="linkPage(4); return false;"><img src="../../images/p_next.gif" alt="다음 페이지" /></a>
+<a href="#" onclick="linkPage(1771); return false;"><img src="../../images/last.gif" alt="마지막 페이지" /></a>
+
+</div>
+			</div>
+
+            <div class="board_info">
+
+                <a href="../../login.html"  style="text-decoration: underline;">내가 작성한 내역 확인 ▶</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="../notice/noticeViewed2c.html?noticeSeq=1522&amp;currentPageNo=1" style="text-decoration: underline;">2019년도 신규대여소 현장조사전 구축 예정지 알림 ▶</a>
+
+                &nbsp;&nbsp;&nbsp;
+                <a href="opinionStationBoardList.html"  style="text-decoration: underline;">대여소 설치 신청 요청시 게시판 이동 ▶</a>
+
+
+            </div>
+            <div class="board_info">
+                <ul>
+                    <li>시민의견 수렴 게시판은 회원 <span>누구나 자유롭게 의견을 게시할 수 있는 열린 공간</span>입니다. <br><span>상업성 광고, 저속한 표현, 욕설, 비방, 정치적 성향, 반복게시물 등은 관리자에 의해 통보없이 삭제</span>될 수 있으며, 홈페이지를 통해 불법 유해 정보 게시, 배포 시 정보통신망 이용촉진 및 정보보호 등에 관한 법률 제 74조에 의거 1년 이하 징역 또는 1천만원 이하의 벌금에 처해질 수 있습니다.</li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+	<script type="text/javascript" src="../../js/common_spb.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$(".left").click(function(){	//추가 : 비밀글 접근 제어 하기 위해_2016.04.21_by_JHN
+				var i = $(".left").index(this);
+				var usrSessIDCntInfo = $("#usrSessIDCnt_" + i).val();
+				var secretYNInfo = $("#secretYN_" + i).val();
+
+				if(secretYNInfo=="Y" ){
+					if(usrSessIDCntInfo!=1){
+						alert('비공개');
+						return false;
+					}
+				}
+			});
+
+
+			var totalPageCount = '1771' == '' ? 1 : Number('1771');
+			$("#searchButton").on("click",function(){
+				var str = replaceXss($("#searchValue").val());
+				$("#searchValue").val(str);
+
+				$("#frm").attr({action : "/customer/opinionBoard/opinionBoardList.do", method : 'post'}).submit();
+			});
+			$('#prevPage').on("click",function(){
+				var currentPageNo = Number($('[name="currentPageNo"]').val());
+				linkPage(currentPageNo-1);
+			});
+			$('#nextPage').on("click",function(){
+				var currentPageNo = Number($('[name="currentPageNo"]').val());
+				linkPage(currentPageNo+1);
+			});
+			$('#movePage').on("click",function(){
+				var currentPageNo = Number($('[name="currentPageNo"]').val());
+				var regExp = /^[1-9]?[0-9]/;
+				if(!regExp.test(currentPageNo) ||(totalPageCount < currentPageNo)){
+					alert('현재 페이지 값이 정상적이지 않습니다.');
+				}else{
+					linkPage(currentPageNo);
+				}
+			});
+		});
+
+	</script>
+
+<!--footer-->
+    <div class="footer_wrap">
+        <div class="footer">
+        	<div class="left">
+            <ul>
+                <!--<li><a href="">개인정보처리방침</a></li>
+                <li class="line"><a href="">이메일주소무단수집거부</a></li>-->
+                <li><a href="../../app/use/moveUseMenuClauseInfo.html">이용약관</a></li>
+                <li class="line"><a href="../../app/use/moveUseMenuClauseInfoc488.html?tabInfo=2">개인정보처리방침</a></li>
+                <li class="line"><a href="../../app/use/moveUseMenuInsurance.html">보험안내</a></li>
+                <li class="line"><a href="../donor/donorList.html">도움주신 분</a></li>
+
+            </ul>
+            <p>서울특별시 중구 세종대로 110 서울특별시 대표자 박원순, Tel : 1599-0120 (사업자등록번호 : 104-83-00469) 우편번호 04524</p>
+            <p>COPYRIGHT ⓒ 2018 bikeseoul All RIGHTS RESERVED.</p>
+            </div>
+            <dl>
+                <dt>sns</dt>
+                <dd class="face" onclick="javascript:moveSnsViewPage('snsFacebook')"><a href="#" id="snsFacebook"> </a></dd>
+                <dd class="twit" onclick="javascript:moveSnsViewPage('snsTweeter')"><a href="#" id="snsTweeter"> </a></dd>
+            </dl>
+        </div>
+    </div>
+<!--footer-->
+
+<script type="text/javascript">
+
+$(function(){
+	var mainType = cookieVal("mainType");
+
+	if (mainType == 'text') {
+		$(".mainTypeMap").css('display', '');
+		$(".mainTypeText").css('display', 'none');
+	} else if (mainType == 'map') {
+		$(".mainTypeMap").css('display', 'none');
+		$(".mainTypeText").css('display', '');
+	} else {
+		$(".mainTypeMap").css('display', 'none');
+		$(".mainTypeText").css('display', '');
+	}
+});
+
+$(function() {
+    $(".back").on("click", goBack);
+});
+
+$(function() {
+    $(".back.left").on("click", goBackLeft);
+});
+
+$(function() {
+    $(".back.right").on("click", goBackRight);
+});
+
+$(function() {
+    $(".pwback").on("click", goBack);
+});
+$(function() {
+    $(".close").on("click", goHome);
+});
+$(function() {
+    $(".logo").on("click", goHome);
+});
+$(function() {
+    $(".alim").on("click", goAlim);
+});
+$(function() {
+    $("#changeLang").on("click", changeLang);
+});
+function osInfo(pOSobj){
+    var obj = JSON.parse(pOSobj);
+    window.osType = obj.osInfo;
+
+    //대여소 찿기 PDF 버튼 숨기기.
+    if($("#pdfDiv") !== 'undefined') {
+	    $("#pdfDiv").css("display","none");
+    }
+};
+
+function goBack(e) {
+	//e.preventDefault();
+    //alert("2->"+e.type +":"+ window.osType);
+    window.osType = '';
+    //alert(window.osType);
+    switch(window.osType){
+    case "web" :
+    	window.history.go(-1);
+        break;
+    case "android" :
+        window.android.goBack();
+        break;
+    case "ios" :
+        window.location = 'toApp://?{"call":"goBack"}';
+        break;
+    case "" :
+    	window.history.go(-1);
+        break;
+    }
+}
+
+function goBackLeft(e) {
+    //e.preventDefault();
+    //alert("2->"+e.type +":"+ window.osType);
+   /*  switch(window.osType){
+    case "web" :
+        window.location.href='/main.do';
+        break;
+    case "android" :
+    	window.location.href='/main.do';
+        break;
+    case "ios" :
+    	window.location.href='/main.do';
+        break;
+    case "" :
+    	window.location.href='/main.do';
+        break;
+    } */
+}
+
+function goBackRight(e) {
+    //e.preventDefault();
+    //alert("2->"+e.type +":"+ window.osType);
+    /* switch(window.osType){
+    case "web" :
+        window.location.href='/main.do';
+        break;
+    case "android" :
+    	window.location.href='/main.do';
+        break;
+    case "ios" :
+    	window.location.href='/main.do';
+        break;
+    case "" :
+    	window.location.href='/main.do';
+        break;
+    } */
+	/* switch(window.osType){
+    case "web" :
+    	window.history.go(-1);
+        break;
+    case "android" :
+        window.android.goBack();
+        break;
+    case "ios" :
+        window.location = 'toApp://?{"call":"goBack"}';
+        break;
+    case "" :
+    	window.history.go(-1);
+        break;
+    } */
+}
+
+function goHome(e) {
+    //e.preventDefault();
+    //alert("2->"+e.type +":"+ window.osType);
+    switch(window.osType){
+    case "web" :
+        window.location.href='../../main.html';
+        break;
+    case "android" :
+    	window.location.href='../../main.html';
+        break;
+    case "ios" :
+    	window.location.href='../../main.html';
+        break;
+    case "" :
+    	window.location.href='../../main.html';
+        break;
+    }
+}
+
+function goAlim(e) {
+    //e.preventDefault();
+    //alert("2->"+e.type +":"+ window.osType);
+    switch(window.osType){
+    case "web" :
+        window.location.href='../../login.html';
+        break;
+    case "android" :
+    	window.location.href='../../login.html';
+        break;
+    case "ios" :
+    	window.location.href='../../login.html';
+        break;
+    case "" :
+        window.location.href='../../login.html';
+        break;
+    }
+}
+
+function changeLang(e) {
+	var lang = 'en'
+
+	switch(window.osType){
+    case "web" :
+        window.location.href='/main.do?lang='+lang;
+        break;
+    case "android" :
+    	window.location.href='/main.do?lang='+lang;
+        break;
+    case "ios" :
+    	window.location.href='/main.do?lang='+lang;
+        break;
+    case "" :
+        window.location.href='/main.do?lang='+lang;
+        break;
+    }
+}
+
+function moveSnsViewPage(flag){
+
+	var tUrl = "";
+	if(flag === 'snsFacebook') {
+		tUrl = "https://www.facebook.com/seoulbike";
+    } else {
+    	tUrl = "https://twitter.com/seoulbike";
+    }
+	switch(window.osType){
+	    case "web" :
+	    	window.open(tUrl,"_blank");
+	        break;
+	    case "android" :
+	        var pData = {targetUrl  :tUrl, returnFnc : "", title : "서울자전거sns" };
+	        window.android.openWebviewPopup(JSON.stringify(pData));
+	        break;
+	    case "ios" :
+	        var iosUrl = 'toApp://?{"targetUrl" : "'+tUrl+'","title" : "서울자전거sns", "returnFnc" : "", "call":"openWebviewPopup"}';
+	        window.location = iosUrl;
+	        break;
+    }
+}
+
+</script>
+</body>
+
+<!-- Mirrored from www.bikeseoul.com/customer/opinionBoard/opinionBoardList.do by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Aug 2019 10:54:11 GMT -->
+</html>

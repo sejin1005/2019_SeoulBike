@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Mirrored from www.bikeseoul.com/app/use/moveUseMenuInsurance.do by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Aug 2019 10:54:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=medium-dpi" name="viewport">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description=" Content="" />
+<title>서울자전거 따릉이 - 무인대여시스템</title>
+<link href="../../css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../../js/easing/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../../js/gibberish-aes.js"></script>
+<script type="text/javascript" src="../../js/jquery.simpler-sidebar.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-confirm.js"></script>
+<script type="text/javascript" src="../../js/comm.js"></script>
+<script type="text/javascript" src="../../js/common_spb.js"></script>
+
+<link rel="stylesheet" href="../../css/style_kr_v2.css" type="text/css">
+<link rel="stylesheet" href="../../css/common.css" type="text/css">
+<link rel="stylesheet" href="../../css/jquery-confirm.css">
+<!--[if lt IE 9]>
+<link href="/css/pw.css" title="ie8chn" rel="stylesheet" type="text/css" />
+<script src="/js/html5.js"></script>
+<script src="/js/respond.min.js"></script>
+<![endif]-->
+<script src="../../js/repond.min.html"></script>
+</head>
+<body>
+<div class="wrap board">
+
+	<!--웹 : 헤더추가-->
+    <div class="header_wrap">
+        <div class="header">
+            <div class="top">
+            	<div class="setting">
+					<ul>
+						<li class="mainTypeText" id="textBtn"><a href="javascript:changeMainType('text');">텍스트</a></li>
+						<li class="mainTypeMap" id="mapBtn"><a href="javascript:changeMainType('map');">지도</a></li>
+					</ul>
+				</div>
+                <a class="join" href="../../memberRegSelect3e43.html?appOsType=">회원가입</a>
+						<a class="login" href="../../login.html">로그인</a>
+					<div class="global" id="changeLang">
+                    <ul>
+                        <li class="en"><a href="https://www.bikeseoul.com:447/main.do?lang=en">ENGLISH</a></li>
+                        <li class="ch"><a href="https://www.bikeseoul.com:447/main.do?lang=zh">中國語</a></li>
+                        <li class="ja"><a href="https://www.bikeseoul.com:447/main.do?lang=ja">日本語</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo"><a href="../../main.html"><img src="../../images/logo.png" alt="서울자전거 따릉이"></a></div>
+
+            <!--메뉴(웹)-->
+            <div class="menu_web">
+                <ul>
+                    <li><a href="../../main.html#bike_info">사업소개</a></li>
+                    <li><a href="../station/moveStationRealtimeStatus.html">대여소 조회</a></li>
+                    <li><a href="../../login.html">이용권 구매</a></li>
+                    <li><a href="../../customer/opinionBoard/opinionBoardList.html">시민의견수렴</a></li>
+                    <li><a href="../../customer/notice/noticeList.html">공지사항</a></li>
+                    <li><a href="../../customer/faq/faqList.html">안전수칙</a></li>
+                </ul>
+            </div>
+            <button id="showRight" class="menu_app"></button>
+            <!--메뉴(웹)-->
+        </div>
+    </div>
+    <!--웹 : 헤더추가--><div class="container">
+    	<div class="content">
+
+        <div class="business">
+            <div class="top">
+                <h3>보험안내</h3>
+                <button class="back right"></button>
+                <button class="close"></button>
+            </div>
+
+            <div class="agreement">
+                <p class="stitle2">1. 공공자전거 종합보험 안내</p>
+                <ul class="usagr">
+                    <li> 서울형 공공자전거의 이용자가 자전거를 대여하여 사용하는 중에 발생한 사고에 대비하여 2017년 09월 19일로 동부화재해상보험(주) 및 KB손해보험,삼성화재해상보험주식회사 공동 보험계약을 체결함으로 아래와 같이 보장내용 및 청구방법을 안내드립니다.</li>
+                </ul>
+                <br>
+                <table class="psboard3 mt10">
+                    <caption>
+                        <details>
+                            <summary>개인정보</summary>
+                            <p>보험기간, 보험계약자,피보험자, 수익자</p>
+                        </details>
+                    </caption>
+                    <colgroup>
+                        <col style="width:30%">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <!-- <tr>
+                            <td scope="col">◎ 보험기간</td>
+                            <td>2015년 09월 19일 00:00부터 2016년 09월 18일 24:00까지(12개월)</td>
+                        </tr> -->
+                        <tr>
+                            <td scope="col">◎ 보험계약자</td>
+                            <td>서울시설공단</td>
+                        </tr>
+                        <tr>
+                            <td scope="col">◎ 피보험자</td>
+                            <td>서울 공공자전거 ‘따릉이’ 이용자</td>
+                        </tr>
+                        <tr>
+                            <td scope="col">◎ 수익자</td>
+                            <td>피보험자 본인(사망시 법정상속인)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+
+                <p class="stitle3">ㅁ 보험 보장내용</p>
+                <table class="psboard3 mt10">
+                    <caption>
+                        <details>
+                            <summary>개인정보</summary>
+                            <p>구분,보장내용, 보장 한도액</p>
+                        </details>
+                    </caption>
+                    <colgroup>
+                        <col style="width:20%">
+                        <col style="width:auto">
+                        <col style="width:20%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">회원구분</th>
+                            <th scope="col">보장내용</th>
+                            <th scope="col">보장 한도액</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>공공자전거 상해사망</td>
+                            <td>보험기간중 공공자전거 이용중에 발생한 자전거 교통사고로 사망시(만15세 미만자 제외)※타제도와 관계없이 중복보상</td>
+                            <td>2천만원</td>
+                        </tr>
+                        <tr>
+                            <td>공공자전거 후유장해</td>
+                            <td>보험기간중 공공자전거 이용중에 발생한 자전거 교통사고로 후유장해시(3%~100%)<br>※타제도와 관계없이 중복보상<br>※상해에 따른 치료비는 보상하지 않습니다.</td>
+                            <td>60만원 ~ 2천만원</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">‘휴유장해’라 함은 상해에 대하여 치유된후 신체에 남아있는 영구적인 정신 또는 육체의 훼손상태를 말합니다..</td>
+                        </tr>
+                <tr>
+                            <td>공공자전거 치료비<br> ※ 2016.09.19 부터</td>
+                            <td>보험기간중 공공자전거의 이용중에 발생한 우연한 사고(이하"사고")로 인하여 치료시 가입금액 한도로 보상</td>
+                            <td>500만원</td>
+                        </tr>
+                        <tr>
+                            <td>공공자전거 사고배상책임</td>
+                            <td>보험기간중 공공자전거의 이용중에 발생한 사고로 인하여 타인의 신체에 장해를 입히거나 타인의 재물을 망가뜨려 법률상의 배상책임을 부담함으로써 입은 손해담보</td>
+                            <td>3천만원 <br>(본인부담금 5만원)</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <strong>※ 공공자전거란?</strong><br>
+                                공공자전거라 함은 공공자전거 사업자의 소유로 일정 조건에 맞는 회원에게 대여되는 해당 자전거를 말하며, 여기에서 자전거란 핸들 또는 페달을 이용하여 인력에 의하여 운전하는 2륜 이상의 차(레일에 의해 운전하는 차, 신체장애자용 휠체어 및 유아용 3륜 이상의 차를 제외) 및 그 부속품(적재물 포함)을 말합니다.<br>※공공자전거 이용중이란?<br>공공자전거를 대여하는 절차가 끝난 시점부터 반납하는 절차가 시작되는 시점까지 공공자전거를 운행, 주·정차하는 행위 등을 말합니다. 운행하는 행위, 주․정차하는 행위 등을 제외한 기타 공공자전거와 관련이 없는 행위는 “이용”으로 보지 않습니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <p class="stitle3">ㅁ 공공자전거 종합보험 접수 및 처리절차</p>
+                <ul class="usagr">
+                    <li> 접수 : 동부화재해상보험(Tel : 02-1899-7751) <br>※ 서울시에서 사고 접수시 사고자 및 보험사에 안내</li>
+                    <li> 처리 : 보험사에서 접수일로부터 7일이내 처리후 개별통보</li>
+                    <li> 보험금 지급사유별 첨부서류</li>
+                </ul>
+                <br>
+                <p class="usagr mb10">
+                1. 공통서류 : 보험금청구서(사고장소 반드시 기재), 주민등록등(초)본, 신분증사본, 통장사본, 초진진료차트, 공공자전거 대여사실 확인서 또는 이용대장  <br>※ 미성년자(만19세미만)는 부모님중 한분의 신분증, 통장사본 제출</p>
+                <p class="usagr mb10">
+                2. 사망 - 사망진단서(또는 사체검안서), 가족관계등록부, 가족관계증명서, 대표자 위임장 및 법정상속인의 인감증명서(상속인이 다수인 경우 각각의 인감날인 및 인감증명서 필요), 기타 가족관계에 따라 혼인/입양/친양자 관계증명서, 교통사고사실확인원(차대자전거 사고시)</p>
+                <p class="usagr mb10">
+                3. 후유장해 - 입원 또는 치료병원에서 발급한 후유장해진단서, 운동장해인 경우에는 AMA방식의 장해진단서(장애인복지법상의 장해진단서는 해당되지 않음), 최초 및 최종필름 (X-ray 혹은 MRI 혹은 CT), 교통사고사실확인원(차대자전거 사고시)</p>
+                <p class="usagr mb10">
+                4.  배상책임 - 손해배상금 및 그밖의 비용을 지급하였음을 증명하는 서류, 보험사가 요구하는 기타서류</p>
+                <p class="usagr mb10 tc">
+                (동부화재해상보험(☏1899-4040, 콜센터)에 접수후 안내)</p><br>
+
+                <p class="stitle2">2. 영조물 배상공제 안내</p>
+                <table class="psboard3 mt10">
+                    <caption>
+                        <details>
+                            <summary>개인정보</summary>
+                            <p>구분,보장내용,보장 한도액</p>
+                        </details>
+                    </caption>
+                    <colgroup>
+                        <col style="width:20%">
+                        <col style="width:auto">
+                        <col style="width:20%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">구분</th>
+                            <th scope="col">보장내용</th>
+                            <th scope="col">보장 한도액</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.공공자전거 이용중 대인 사고</td>
+                            <td>공공자전거 이용중 공공자전거 결함, 관리상 하자로 인해 이용자 본인 및 제3자의 신체가 장해를 입은 경우 <br>※신체장해란 신체의 상해, 질병 및 그로 인한 사망을 말합니다.</td>
+                            <td>1인당 1억원</td>
+                        </tr>
+                        <tr>
+                            <td>2.공공자전거 이용중 대물 사고</td>
+                            <td>공공자전거 이용중 공공자전거 결함, 관리상 하자로 인해 이용자 본인 및 제3자의 재물이 망가진 경우</td>
+                            <td>1사고당 3억원</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <p class="stitle3">ㅁ 영조물 손해배상 보험 접수 및 처리 안내</p>
+                <ul class="usagr">
+                    <li>접수 : 공공자전거 사고 당사자 → 서울특별시시설관리공단(Tel : 02-1599-0120)  → 한국지방재정공제회 <br>※ 붙임 : 영조물 사고접수 양식에 따라 접수</li>
+                    <li>처리 : 한국지방재정공제회의 위임을 받은 손해보험사에서 접수한 일로부터 7일이내에  배상금 지급 개별통지</li>
+                </ul>
+                <br>
+                <p class="stitle2 tc ">기타 자세한 사항은 보험약관을 참고하시기 바랍니다.</p>
+            </div>
+            <p class="tc mt40" id="pdfDiv" align="center">
+            </p>
+
+        </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+<script type="text/javascript" src="../../js/common_spb.js"></script>
+<!--footer-->
+    <div class="footer_wrap">
+        <div class="footer">
+        	<div class="left">
+            <ul>
+                <!--<li><a href="">개인정보처리방침</a></li>
+                <li class="line"><a href="">이메일주소무단수집거부</a></li>-->
+                <li><a href="moveUseMenuClauseInfo.html">이용약관</a></li>
+                <li class="line"><a href="moveUseMenuInsurance.html">보험안내</a></li>
+            </ul>
+            <p>서울특별시 중구 세종대로 110 서울특별시 대표자 박원순, Tel : 1599-0120 (사업자등록번호 : 104-83-00469) 우편번호 04524</p>
+            <p>COPYRIGHT ⓒ 2018 bikeseoul All RIGHTS RESERVED.</p>
+            </div>
+
+        </div>
+    </div>
+<!--footer-->
+
+<script type="text/javascript">
+
+$(function(){
+	var mainType = cookieVal("mainType");
+
+	if (mainType == 'text') {
+		$(".mainTypeMap").css('display', '');
+		$(".mainTypeText").css('display', 'none');
+	} else if (mainType == 'map') {
+		$(".mainTypeMap").css('display', 'none');
+		$(".mainTypeText").css('display', '');
+	} else {
+		$(".mainTypeMap").css('display', 'none');
+		$(".mainTypeText").css('display', '');
+	}
+});
+
+$(function() {
+    $(".back").on("click", goBack);
+});
+
+$(function() {
+    $(".back.left").on("click", goBackLeft);
+});
+
+$(function() {
+    $(".back.right").on("click", goBackRight);
+});
+
+$(function() {
+    $(".pwback").on("click", goBack);
+});
+$(function() {
+    $(".close").on("click", goHome);
+});
+$(function() {
+    $(".logo").on("click", goHome);
+});
+$(function() {
+    $(".alim").on("click", goAlim);
+});
+$(function() {
+    $("#changeLang").on("click", changeLang);
+});
+function osInfo(pOSobj){
+    var obj = JSON.parse(pOSobj);
+    window.osType = obj.osInfo;
+
+    //대여소 찿기 PDF 버튼 숨기기.
+    if($("#pdfDiv") !== 'undefined') {
+	    $("#pdfDiv").css("display","none");
+    }
+};
+
+function goBack(e) {
+	//e.preventDefault();
+    //alert("2->"+e.type +":"+ window.osType);
+    window.osType = '';
+    //alert(window.osType);
+    switch(window.osType){
+    case "web" :
+    	window.history.go(-1);
+        break;
+    case "android" :
+        window.android.goBack();
+        break;
+    case "ios" :
+        window.location = 'toApp://?{"call":"goBack"}';
+        break;
+    case "" :
+    	window.history.go(-1);
+        break;
+    }
+}
+
+function goBackLeft(e) {
+    //e.preventDefault();
+    //alert("2->"+e.type +":"+ window.osType);
+   /*  switch(window.osType){
+    case "web" :
+        window.location.href='/main.do';
+        break;
+    case "android" :
+    	window.location.href='/main.do';
+        break;
+    case "ios" :
+    	window.location.href='/main.do';
+        break;
+    case "" :
+    	window.location.href='/main.do';
+        break;
+    } */
+}
+
+function goBackRight(e) {
+    //e.preventDefault();
+    //alert("2->"+e.type +":"+ window.osType);
+    /* switch(window.osType){
+    case "web" :
+        window.location.href='/main.do';
+        break;
+    case "android" :
+    	window.location.href='/main.do';
+        break;
+    case "ios" :
+    	window.location.href='/main.do';
+        break;
+    case "" :
+    	window.location.href='/main.do';
+        break;
+    } */
+	/* switch(window.osType){
+    case "web" :
+    	window.history.go(-1);
+        break;
+    case "android" :
+        window.android.goBack();
+        break;
+    case "ios" :
+        window.location = 'toApp://?{"call":"goBack"}';
+        break;
+    case "" :
+    	window.history.go(-1);
+        break;
+    } */
+}
+
+function goHome(e) {
+    //e.preventDefault();
+    //alert("2->"+e.type +":"+ window.osType);
+    switch(window.osType){
+    case "web" :
+        window.location.href='../../main.html';
+        break;
+    case "android" :
+    	window.location.href='../../main.html';
+        break;
+    case "ios" :
+    	window.location.href='../../main.html';
+        break;
+    case "" :
+    	window.location.href='../../main.html';
+        break;
+    }
+}
+
+function goAlim(e) {
+    //e.preventDefault();
+    //alert("2->"+e.type +":"+ window.osType);
+    switch(window.osType){
+    case "web" :
+        window.location.href='../../login.html';
+        break;
+    case "android" :
+    	window.location.href='../../login.html';
+        break;
+    case "ios" :
+    	window.location.href='../../login.html';
+        break;
+    case "" :
+        window.location.href='../../login.html';
+        break;
+    }
+}
+
+function changeLang(e) {
+	var lang = 'en'
+
+	switch(window.osType){
+    case "web" :
+        window.location.href='/main.do?lang='+lang;
+        break;
+    case "android" :
+    	window.location.href='/main.do?lang='+lang;
+        break;
+    case "ios" :
+    	window.location.href='/main.do?lang='+lang;
+        break;
+    case "" :
+        window.location.href='/main.do?lang='+lang;
+        break;
+    }
+}
+
+function moveSnsViewPage(flag){
+
+	var tUrl = "";
+	if(flag === 'snsFacebook') {
+		tUrl = "https://www.facebook.com/seoulbike";
+    } else {
+    	tUrl = "https://twitter.com/seoulbike";
+    }
+	switch(window.osType){
+	    case "web" :
+	    	window.open(tUrl,"_blank");
+	        break;
+	    case "android" :
+	        var pData = {targetUrl  :tUrl, returnFnc : "", title : "서울자전거sns" };
+	        window.android.openWebviewPopup(JSON.stringify(pData));
+	        break;
+	    case "ios" :
+	        var iosUrl = 'toApp://?{"targetUrl" : "'+tUrl+'","title" : "서울자전거sns", "returnFnc" : "", "call":"openWebviewPopup"}';
+	        window.location = iosUrl;
+	        break;
+    }
+}
+
+</script>
+</body>
+
+<!-- Mirrored from www.bikeseoul.com/app/use/moveUseMenuInsurance.do by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Aug 2019 10:54:23 GMT -->
+</html>

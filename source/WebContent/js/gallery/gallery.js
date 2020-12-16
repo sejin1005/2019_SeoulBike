@@ -1,0 +1,173 @@
+$(function(){
+                //#gallery
+                $('#gallery')
+                    .supergallery({
+                        animation:{
+                            type:'slide'
+                        },
+                        other:{
+                            loop:false,
+                            changePageEvent:'mouseenter'
+                        }
+                    })
+                    .on('pageChangeStart',function(e,num){
+                        //console.log(e.type,num);
+                        })
+                    .on('pageChangeEnd',function(e,num){
+                        //console.log(e.type,num);
+                    });
+        
+        
+                //#gallery2
+               // var gallery2 = $.superThumbGallery('#gallery2');
+
+				 //#gallery
+                $('#gallery2')
+                    .supergallery({
+                        animation:{
+                            type:'slide'
+                        },
+                        other:{
+                            loop:false,
+                            changePageEvent:'mouseenter'
+                        }
+                    })
+                    .on('pageChangeStart',function(e,num){
+                        //console.log(e.type,num);
+                        })
+                    .on('pageChangeEnd',function(e,num){
+                        //console.log(e.type,num);
+                    });
+        
+        
+                //#gallery2
+
+				//var gallery3 = $.superThumbGallery('#gallery3');
+
+				 //#gallery
+                $('#gallery3')
+                    .supergallery({
+                        animation:{
+                            type:'slide'
+                        },
+                        other:{
+                            loop:false,
+                            changePageEvent:'mouseenter'
+                        }
+                    })
+                    .on('pageChangeStart',function(e,num){
+                        //console.log(e.type,num);
+                        })
+                    .on('pageChangeEnd',function(e,num){
+                        //console.log(e.type,num);
+                    });
+					
+				  //#gallery
+                $('#gallery4')
+                    .supergallery({
+                        animation:{
+                            type:'slide'
+                        },
+                        other:{
+                            loop:false,
+                            changePageEvent:'mouseenter'
+                        }
+                    })
+                    .on('pageChangeStart',function(e,num){
+                        //console.log(e.type,num);
+                        })
+                    .on('pageChangeEnd',function(e,num){
+                        //console.log(e.type,num);
+                    });
+					
+					//#gallery
+                $('#gallery5')
+                    .supergallery({
+                        animation:{
+                            type:'slide'
+                        },
+                        other:{
+                            loop:false,
+                            changePageEvent:'mouseenter'
+                        }
+                    })
+                    .on('pageChangeStart',function(e,num){
+                        //console.log(e.type,num);
+                        })
+                    .on('pageChangeEnd',function(e,num){
+                        //console.log(e.type,num);
+                    });
+					
+					//#gallery
+                $('#gallery6')
+                    .supergallery({
+                        animation:{
+                            type:'slide'
+                        },
+                        other:{
+                            loop:false,
+                            changePageEvent:'mouseenter'
+                        }
+                    })
+                    .on('pageChangeStart',function(e,num){
+                        //console.log(e.type,num);
+                        })
+                    .on('pageChangeEnd',function(e,num){
+                        //console.log(e.type,num);
+                    });
+					
+					//#gallery
+                $('#gallery7')
+                    .supergallery({
+                        animation:{
+                            type:'slide'
+                        },
+                        other:{
+                            loop:false,
+                            changePageEvent:'mouseenter'
+                        }
+                    })
+                    .on('pageChangeStart',function(e,num){
+                        //console.log(e.type,num);
+                        })
+                    .on('pageChangeEnd',function(e,num){
+                        //console.log(e.type,num);
+                    });
+					
+					//#gallery
+                $('#gallery8')
+                    .supergallery({
+                        animation:{
+                            type:'slide'
+                        },
+                        other:{
+                            loop:false,
+                            changePageEvent:'mouseenter'
+                        }
+                    })
+                    .on('pageChangeStart',function(e,num){
+                        //console.log(e.type,num);
+                        })
+                    .on('pageChangeEnd',function(e,num){
+                        //console.log(e.type,num);
+                    });
+					
+					//#gallery
+                $('#gallery9')
+                    .supergallery({
+                        animation:{
+                            type:'slide'
+                        },
+                        other:{
+                            loop:false,
+                            changePageEvent:'mouseenter'
+                        }
+                    })
+                    .on('pageChangeStart',function(e,num){
+                        //console.log(e.type,num);
+                        })
+                    .on('pageChangeEnd',function(e,num){
+                        //console.log(e.type,num);
+                    });
+                    
+});

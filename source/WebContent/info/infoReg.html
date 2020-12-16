@@ -1,0 +1,626 @@
+<html>
+
+<!-- Mirrored from www.bikeseoul.com/info/infoReg.do by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Aug 2019 10:53:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=medium-dpi" name="viewport">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>서울자전거 따릉이 - 무인대여시스템</title>
+<link href="../css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/easing/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../js/gibberish-aes.js"></script>
+<script type="text/javascript" src="../js/jquery.simpler-sidebar.min.js"></script>
+<script type="text/javascript" src="../js/jquery-confirm.js"></script>
+<script type="text/javascript" src="../js/comm.js"></script>
+<script type="text/javascript" src="../js/common_spb.js"></script>
+
+<link rel="stylesheet" href="../css/style_kr_v2.css" type="text/css">
+<link rel="stylesheet" href="../css/common.css" type="text/css">
+<link rel="stylesheet" href="../css/jquery-confirm.css">
+<!--[if lt IE 9]>
+<link href="/css/pw.css" title="ie8chn" rel="stylesheet" type="text/css" />
+<script src="/js/html5.js"></script>
+<script src="/js/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../js/common_spb.js"></script>
+<script src="../js/accordion/jquery-2.1.0.min.js"></script>
+<script src="../js/accordion/jquery.responsiveTabs.js" type="text/javascript"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            var $tabs = $('#horizontalTab');
+            $tabs.responsiveTabs({
+                rotate: false,
+                startCollapsed: 'accordion',
+                collapsible: 'accordion',
+                setHash: true,
+                disabled: [9],
+                click: function(e, tab) {
+                    $('.info').html('Tab <strong>' + tab.id + '</strong> clicked!');
+                },
+                activate: function(e, tab) {
+                    $('.info').html('Tab <strong>' + tab.id + '</strong> activated!');
+                },
+                activateState: function(e, state) {
+                    //console.log(state);
+                    $('.info').html('Switched from <strong>' + state.oldState + '</strong> state to <strong>' + state.newState + '</strong> state!');
+                }
+            });
+            $('#start-rotation').on('click', function() {
+                $tabs.responsiveTabs('startRotation', 1000);
+            });
+            $('#stop-rotation').on('click', function() {
+                $tabs.responsiveTabs('stopRotation');
+            });
+            $('#start-rotation').on('click', function() {
+                $tabs.responsiveTabs('active');
+            });
+            $('#enable-tab').on('click', function() {
+                $tabs.responsiveTabs('enable', 3);
+            });
+            $('#disable-tab').on('click', function() {
+                $tabs.responsiveTabs('disable', 3);
+            });
+            $('.select-tab').on('click', function() {
+                $tabs.responsiveTabs('activate', $(this).val());
+            });
+
+		     $('ul.tabs li').click(function(){
+		    	 var tab_id = $(this).attr('data-tab');
+				 var par_id = $(this).parents('div').attr('id');
+
+				$("#"+par_id).find('.tab-content').removeClass('current');
+                $("#"+par_id).find('.tab-link').removeClass('current');
+				//$('ul.tabs li').removeClass('current');
+				//$('.tab-content').removeClass('current');
+
+				$(this).addClass('current');
+				$("#"+tab_id).addClass('current');
+
+    //다른 항목에 있는 current 까지 삭제 한거 복구
+	/* if(tab_idx.length == 2) {
+		$("#tab-"+tab_id.substring(1)).addClass('current');
+	} else if(tab_idx.length == 1) {
+		$("#tab-"+tab_idx+tab_idx).addClass('current');
+	} */
+
+  		})
+
+
+		     var urlParam = getUrlParams();
+		     var tabVal = urlParam["tabVal"];
+		     var tabVal2 = urlParam["tabVal2"];
+		 	 if(tabVal !=''){
+		     	$("#"+tabVal).trigger("click");
+		 	 }
+		 	if(tabVal2 !=''){
+		     	$("#"+tabVal2).trigger("click");
+		 	 }
+		 	//}
+  });
+
+</script>
+<script type="text/javascript" src="../js/gallery/jquery-supergallery-plugin2.js"></script>
+<script type="text/javascript" src="../js/gallery/gallery.js"></script>
+</head>
+
+<body>
+<div class="wrap guide">
+
+	<!--웹 : 헤더추가-->
+    <div class="header_wrap">
+        <div class="header">
+            <div class="top">
+            	<div class="setting">
+					<ul>
+						<li class="mainTypeText" id="textBtn"><a href="javascript:changeMainType('text');">텍스트</a></li>
+						<li class="mainTypeMap" id="mapBtn"><a href="javascript:changeMainType('map');">지도</a></li>
+					</ul>
+				</div>
+                <a class="join" href="../memberRegSelect3e43.html?appOsType=">회원가입</a>
+						<a class="login" href="../login.html">로그인</a>
+					<div class="global" id="changeLang">
+                    <ul>
+                        <li class="en"><a href="https://www.bikeseoul.com:447/main.do?lang=en">ENGLISH</a></li>
+                        <li class="ch"><a href="https://www.bikeseoul.com:447/main.do?lang=zh">中國語</a></li>
+                        <li class="ja"><a href="https://www.bikeseoul.com:447/main.do?lang=ja">日本語</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo"><a href="../main.html"><img src="../images/logo.png" alt="서울자전거 따릉이"></a></div>
+
+            <!--메뉴(웹)-->
+            <div class="menu_web">
+                <ul>
+                    <li><a href="../main.html#bike_info">사업소개</a></li>
+                    <li><a href="../app/station/moveStationRealtimeStatus.html">대여소 조회</a></li>
+                    <li><a href="../login.html">이용권 구매</a></li>
+                    <li><a href="../customer/opinionBoard/opinionBoardList.html">시민의견수렴</a></li>
+                    <li><a href="../customer/notice/noticeList.html">공지사항</a></li>
+                    <li><a href="../customer/faq/faqList.html">안전수칙</a></li>
+                </ul>
+            </div>
+            <button id="showRight" class="menu_app"></button>
+            <!--메뉴(웹)-->
+        </div>
+    </div>
+    <!--웹 : 헤더추가--><div class="container">
+    	<div class="content">
+
+        <!--이용안내-->
+        <div class="guide">
+            <div class="top">
+                <h3>이용안내</h3>
+                <button class="close"></button>
+            </div>
+            <div class="list_wrap" id="horizontalTab">
+                <ul>
+                    <li><a id="tab1" href="#tab-1">회원 이용절차</a></li>
+                    <li><a id="tab2" href="#tab-2">카드등록하기</a></li>
+                    <li><a id="tab3" href="#tab-3">이용권 구매/추가 과금 등 안내</a></li>
+                    <li><a id="tab4" href="#tab-4">자가잠금/연결반납 하기</a></li>
+                    <li><a id="tab5" href="#tab-5">대중교통 환승마일리지 서비스</a></li>
+                    <!--<li><a href="#tab-6">안전하게 자전거 이용하기</a></li>-->
+                    <li><a id="tab7" href="#tab-7">비회원/외국관광객 이용절차</a></li>
+                    <li><a id="tab8" href="#tab-8">단체권 사용법</a></li>
+                </ul>
+
+                <!--1.회원 이용절차-->
+                <div class="bike_list" id="tab-1">
+                	<div id="gallery" class="gallery">
+                        <div class="mainHolder">
+                            <ul class="main">
+                                <li><h1>1. 회원가입<p>회원가입완료 후 자동로그인됩니다.</p></h1><img src="../images/guide_01_1.jpg" alt=""></li>
+                                <li><h1>2. 이용권구매<p></p></h1><img src="../images/guide_01_2.jpg" alt=""></li>
+                                <li><h1>3. 지도에서 대여소 선택<p></p></h1><img src="../images/guide_01_3.jpg" alt=""></li>
+                                <li><h1>4. 대여요청<p></p></h1><img src="../images/guide_01_4.jpg" alt=""></li>
+                                <li><h1>5. 단말기 홈버튼 선택<p>자전거에 부착된 단말기의 홈버튼을 1.5초간 누릅니다.</p></h1><img src="../images/guide_01_5.jpg" alt=""></li>
+                                <li><h1>6. 단말기 오른쪽잠금장치 분리<p></p></h1><img src="../images/guide_01_6.jpg" alt=""></li>
+                            </ul>
+                             <div class="nav">
+                                <div class="prevBtn"><img src="../images/prevBtn.jpg" alt=""></div>
+                                <div class="nextBtn"><img src="../images/nextBtn.jpg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--2.카드등록하기-->
+                <div class="bike_list" id="tab-2">
+                	<ul class="tabs">
+                        <li class="tab-link current" id=taba" data-tab="tab-a">티머니</li>
+                        <li class="tab-link" id=tabb" data-tab="tab-b">후불교통</li>
+                        <li class="tab-link" id=tabc" data-tab="tab-c">환승카드</li>
+                  	</ul>
+
+                  	<div id="tab-a" class="tab-content current">
+                    	<div id="gallery2" class="gallery">
+                            <div class="mainHolder">
+                                <ul class="main">
+                                    <li><h1>1.로그인<p></p></h1><img src="../images/guide_02a_1.jpg" alt=""></li>
+                                    <li><h1>2.회원카드 등록<p></p></h1><img src="../images/guide_02a_2.jpg" alt=""></li>
+                                    <li><h1>3.카드번호 입력<p>등록할 카드뒷면 16자리를 입력합니다.</p></h1><img src="../images/guide_02a_3.jpg" alt=""></li>
+                                    <li><h1>4.등록완료<p>저장히기 버튼을 누릅니다.</p></h1><img src="../images/guide_02a_4.jpg" alt=""></li>
+                                </ul>
+                                 <div class="nav">
+                                    <div class="prevBtn"><img src="../images/prevBtn.jpg" alt=""></div>
+                                    <div class="nextBtn"><img src="../images/nextBtn.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                  	<div id="tab-b" class="tab-content">
+                    	<div id="gallery3" class="gallery">
+                            <div class="mainHolder">
+                                <ul class="main">
+                                    <li><h1>1.대여소 방문<p>카드를 단말기에 태깅하여야 등록이 완료됩니다.</p></h1><img src="../images/guide_02b_1.jpg" alt=""></li>
+                                    <li><h1>2.대여신청 및 카드등록 체크<p></p></h1><img src="../images/guide_02b_2.jpg" alt=""></li>
+                                    <li><h1>3.홈버튼 누르기<p></p></h1><img src="../images/guide_02b_3.jpg" alt=""></li>
+                                    <li><h1>4.대여비밀번호 입력<p></p></h1><img src="../images/guide_02b_4.jpg" alt=""></li>
+                                    <li><h1>5.카드 태깅<p></p></h1><img src="../images/guide_02b_5.jpg" alt=""></li>
+                                    <li><h1>6.등록완료<p></p></h1><img src="../images/guide_02b_6.jpg" alt=""></li>
+                                </ul>
+                                 <div class="nav">
+                                    <div class="prevBtn"><img src="../images/prevBtn.jpg" alt=""></div>
+                                    <div class="nextBtn"><img src="../images/nextBtn.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                  	<div id="tab-c" class="tab-content">
+                    	<div id="gallery4" class="gallery">
+                            <div class="mainHolder">
+                                <ul class="main">
+                                    <li><h1>1.로그인<p></p></h1><img src="../images/guide_02a_1.jpg" alt=""></li>
+                                    <li><h1>2.회원카드 등록<p></p></h1><img src="../images/guide_02c_2.jpg" alt=""></li>
+                                    <li><h1>3.카드번호 입력<p>등록할 카드뒷면 16자리를 입력합니다.</p></h1><img src="../images/guide_02c_3.jpg" alt=""></li>
+                                    <li><h1>4.등록완료<p>저장히기 버튼을 누릅니다.</p></h1><img src="../images/guide_02c_4.jpg" alt=""></li>
+                                </ul>
+                                 <div class="nav">
+                                    <div class="prevBtn"><img src="../images/prevBtn.jpg" alt=""></div>
+                                    <div class="nextBtn"><img src="../images/nextBtn.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               <!--3. 이용권 구매/추가 과금 등 안내-->
+                <div class="bike_list" id="tab-3">
+                	<ul class="tabs">
+                        <li class="tab-link current" id="tabd" data-tab="tab-d">이용권구매</li>
+                        <li class="tab-link" id="tabe" data-tab="tab-e">추가과금</li>
+                  	</ul>
+
+                  	<div id="tab-d" class="tab-content current">
+                    	<div id="gallery5" class="gallery">
+                            <div class="mainHolder">
+                                <ul class="main">
+                                    <li><h1>1.이용권 선택<p><!--<strong>회원:</strong>다양한 이용권 선택, <strong>비회원:</strong>일일권 선택--></p></h1><img src="../images/guide_01_2.jpg" alt=""></li>
+                                    <li><h1>2.결제 수단 선택<p></p></h1><img src="../images/guide_03a_2.jpg" alt=""></li>
+                                    <li><h1>3.결제진행<p></p></h1><img src="../images/guide_03a_3.jpg" alt=""></li>
+                                    <li><h1>4.결제완료<p></p></h1><img src="../images/guide_03a_4.jpg" alt=""></li>
+                                </ul>
+                                 <div class="nav">
+                                    <div class="prevBtn"><img src="../images/prevBtn.jpg" alt=""></div>
+                                    <div class="nextBtn"><img src="../images/nextBtn.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                  	<div id="tab-e" class="tab-content">
+                    	<div id="gallery6" class="gallery">
+                            <div class="mainHolder">
+                            	<p class="guide_title">미결제된 추가과금 내역이 있는 경우 자전거 대여가 제한됩니다.</p>
+                                <ul class="main">
+                                    <li><h1>1.추가과금 수단 등록<p>나의 공간 > 추가과금수단 등록으로 이동하여 휴대전화, 카드로 자동결제 수단을 등록합니다.</p></h1><img src="../images/guide_04b_1.jpg" alt=""></li>
+                                    <li><h1>2.추가과금 발생<p>지연 반납 등으로 추가과금이 발생합니다.</p></h1><img src="../images/guide_04b_2.jpg" alt=""></li>
+                                    <li><h1>3.자동결제<p>등록하신 추가과금수단으로 자동으로 결제가 진행됩니다.</p></h1><img src="../images/guide_04b_3.jpg" alt=""></li>
+                                </ul>
+                                 <div class="nav">
+                                    <div class="prevBtn"><img src="../images/prevBtn.jpg" alt=""></div>
+                                    <div class="nextBtn"><img src="../images/nextBtn.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--4.자가잠금/연결반납 하기-->
+                <div class="bike_list" id="tab-4">
+                	<ul class="tabs">
+                        <li class="tab-link current" id=tabf" data-tab="tab-f">자가잠금</li>
+                        <li class="tab-link" id=tabg" data-tab="tab-g">연결반납</li>
+                  	</ul>
+
+                  	<div id="tab-f" class="tab-content current">
+                    	<div style="text-align:center;">
+                            <iframe src="https://www.youtube.com/embed/cRU1S1cpa6I" frameborder="0" width="300px" height="300px"></iframe>
+                        </div>
+                    </div>
+
+                  	<div id="tab-g" class="tab-content">
+                    	<div style="text-align:center;">
+                            <iframe src="https://www.youtube.com/embed/LC6_i8LTUfw" frameborder="0" width="300px" height="300px"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!--5. 대중교통 환승마일리지 서비스-->
+                <div class="bike_list" id="tab-5">
+                	<div id="gallery7" class="gallery">
+                        <div class="mainHolder">
+                        	<p class="guide_title">정기권(365일권)을 구매한 회원에게만 적용됩니다. </p>
+                            <ul class="main">
+                                <li><h1>1.대중교통 환승카드 등록<p>이용하시는 교통카드가 변경된 경우<br> 변경된 카드로 재등록해야 합니다.<br>(미 변경 시 환승마일리지가 적립되지 않습니다)</p></h1><img src="../images/guide_05_1.jpg" alt=""></li>
+                                <li><h1>2.환승 마일리지 적립 및 확인<p>자전거 이용 후 30분 이내에 버스/지하철을 이용하면<br> 마일리지가 적립됩니다.<br>(버스/지하철 이용 후 자전거 이용경우도 동일)<br>나의 공간 > 환승 마일리지에서<br> 적립 포인트를 확인할 수 있으며, 이용 당일은 확인되지 않습니다. ※ 1회 100포인트(원) / 1일 최대 200포인트, <br>년간 최대 15,000포인트</p></h1><img src="../images/guide_05_2.jpg" alt=""></li>
+                                <li><h1>3.마일리지 사용<p>적립된 마일리지는 <br>서울자전거의 정기권 구매시에 현금처럼 사용할 수 있습니다.</p></h1><img src="../images/guide_05_3.jpg" alt=""></li>
+                            </ul>
+                             <div class="nav">
+                                <div class="prevBtn"><img src="../images/prevBtn.jpg" alt=""></div>
+                                <div class="nextBtn"><img src="../images/nextBtn.jpg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="bike_list" id="tab-6">
+                	tab-6
+                </div>-->
+                <div class="bike_list" id="tab-7">
+                	<div id="gallery8" class="gallery">
+                        <div class="mainHolder">
+                        	<p class="guide_title">회원가입을 하지 않아도 비회원 결제후 자전거 이용이 가능합니다.</p>
+                            <ul class="main">
+                                <li><h1>1. 비회원 선택</h1><img src="../images/guide_06_1.jpg" alt=""></li>
+                                <li><h1>2. 홈버튼 누르기</h1><img src="../images/guide_02b_3.jpg" alt=""></li>
+                                <li><h1>3. 대여번호 입력 선택</h1><img src="../images/guide_06_3.jpg" alt=""></li>
+                                <li><h1>4. 대여번호 8자리 중 앞 4자리 입력</h1><img src="../images/guide_06_4.jpg" alt=""></li>
+                                <li><h1>5. 대여번호 8자리중 뒤 4자리 입력</h1><img src="../images/guide_06_5.jpg" alt=""></li>
+                            </ul>
+                             <div class="nav">
+                                <div class="prevBtn"><img src="../images/prevBtn.jpg" alt=""></div>
+                                <div class="nextBtn"><img src="../images/nextBtn.jpg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--8. 단체권 사용법-->
+                <div class="bike_list" id="tab-8">
+                	<div id="gallery9" class="gallery">
+                        <div class="mainHolder">
+                            <ul class="main">
+                                <li><h1>1. 가까운 대여소 확인</h1><img src="../images/guide_07_1.jpg" alt=""></li>
+                                <li><h1>2. 대여소 선택, 대여하기</h1><img src="../images/guide_07_2.jpg" alt=""></li>
+                                <li><h1>3. 단체권 사용 승인</h1><img src="../images/guide_07_3.jpg" alt=""></li>
+                                <li><h1>4. 자전거 선택, 대여하기</h1><img src="../images/guide_07_4.jpg" alt=""></li>
+                                <li><h1>5. 대여신청 승인</h1><img src="../images/guide_07_5.jpg" alt=""></li>
+                                <li><h1>6. 대여완료</h1><img src="../images/guide_07_6.jpg" alt=""></li>
+                            </ul>
+                             <div class="nav">
+                                <div class="prevBtn"><img src="../images/prevBtn.jpg" alt=""></div>
+                                <div class="nextBtn"><img src="../images/nextBtn.jpg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <p style="margin-top:30px"><a href="infoCoupon.html" style="text-decoration:underline; color:#fe4f6c">※ 이용권 사용안내/환불 규정 보기</a></p>
+       <p style="margin-top:30px"><a href="../customer/faq/faqList.html" style="text-decoration:underline; color:#fe4f6c">※자주찾는 질문 바로가기</a></p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function() {
+
+	//tab 설정
+	// var urlParam = getUrlParams();
+	//if (urlParam["card"] === "Trans") {
+	//	$("#transfer_tab").trigger("click");
+	//}
+	//alert(1);
+	// $("#dd2").trigger("click");
+
+});
+
+</script>
+<!--footer-->
+    <div class="footer_wrap">
+        <div class="footer">
+        	<div class="left">
+            <ul>
+                <!--<li><a href="">개인정보처리방침</a></li>
+                <li class="line"><a href="">이메일주소무단수집거부</a></li>-->
+                <li><a href="../app/use/moveUseMenuClauseInfo.html">이용약관</a></li>
+                <li class="line"><a href="../app/use/moveUseMenuInsurance.html">보험안내</a></li>
+
+            </ul>
+            <p>서울특별시 중구 세종대로 110 서울특별시 대표자 박원순, Tel : 1599-0120 (사업자등록번호 : 104-83-00469) 우편번호 04524</p>
+            <p>COPYRIGHT ⓒ 2018 bikeseoul All RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </div>
+<!--footer-->
+
+<script type="text/javascript">
+
+$(function(){
+	var mainType = cookieVal("mainType");
+
+	if (mainType == 'text') {
+		$(".mainTypeMap").css('display', '');
+		$(".mainTypeText").css('display', 'none');
+	} else if (mainType == 'map') {
+		$(".mainTypeMap").css('display', 'none');
+		$(".mainTypeText").css('display', '');
+	} else {
+		$(".mainTypeMap").css('display', 'none');
+		$(".mainTypeText").css('display', '');
+	}
+});
+
+$(function() {
+    $(".back").on("click", goBack);
+});
+
+$(function() {
+    $(".back.left").on("click", goBackLeft);
+});
+
+$(function() {
+    $(".back.right").on("click", goBackRight);
+});
+
+$(function() {
+    $(".pwback").on("click", goBack);
+});
+$(function() {
+    $(".close").on("click", goHome);
+});
+$(function() {
+    $(".logo").on("click", goHome);
+});
+$(function() {
+    $(".alim").on("click", goAlim);
+});
+$(function() {
+    $("#changeLang").on("click", changeLang);
+});
+function osInfo(pOSobj){
+    var obj = JSON.parse(pOSobj);
+    window.osType = obj.osInfo;
+
+    //대여소 찿기 PDF 버튼 숨기기.
+    if($("#pdfDiv") !== 'undefined') {
+	    $("#pdfDiv").css("display","none");
+    }
+};
+
+function goBack(e) {
+	//e.preventDefault();
+    //alert("2->"+e.type +":"+ window.osType);
+    window.osType = '';
+    //alert(window.osType);
+    switch(window.osType){
+    case "web" :
+    	window.history.go(-1);
+        break;
+    case "android" :
+        window.android.goBack();
+        break;
+    case "ios" :
+        window.location = 'toApp://?{"call":"goBack"}';
+        break;
+    case "" :
+    	window.history.go(-1);
+        break;
+    }
+}
+
+function goBackLeft(e) {
+    //e.preventDefault();
+    //alert("2->"+e.type +":"+ window.osType);
+   /*  switch(window.osType){
+    case "web" :
+        window.location.href='/main.do';
+        break;
+    case "android" :
+    	window.location.href='/main.do';
+        break;
+    case "ios" :
+    	window.location.href='/main.do';
+        break;
+    case "" :
+    	window.location.href='/main.do';
+        break;
+    } */
+}
+
+function goBackRight(e) {
+    //e.preventDefault();
+    //alert("2->"+e.type +":"+ window.osType);
+    /* switch(window.osType){
+    case "web" :
+        window.location.href='/main.do';
+        break;
+    case "android" :
+    	window.location.href='/main.do';
+        break;
+    case "ios" :
+    	window.location.href='/main.do';
+        break;
+    case "" :
+    	window.location.href='/main.do';
+        break;
+    } */
+	/* switch(window.osType){
+    case "web" :
+    	window.history.go(-1);
+        break;
+    case "android" :
+        window.android.goBack();
+        break;
+    case "ios" :
+        window.location = 'toApp://?{"call":"goBack"}';
+        break;
+    case "" :
+    	window.history.go(-1);
+        break;
+    } */
+}
+
+function goHome(e) {
+    //e.preventDefault();
+    //alert("2->"+e.type +":"+ window.osType);
+    switch(window.osType){
+    case "web" :
+        window.location.href='../main.html';
+        break;
+    case "android" :
+    	window.location.href='../main.html';
+        break;
+    case "ios" :
+    	window.location.href='../main.html';
+        break;
+    case "" :
+    	window.location.href='../main.html';
+        break;
+    }
+}
+
+function goAlim(e) {
+    //e.preventDefault();
+    //alert("2->"+e.type +":"+ window.osType);
+    switch(window.osType){
+    case "web" :
+        window.location.href='../login.html';
+        break;
+    case "android" :
+    	window.location.href='../login.html';
+        break;
+    case "ios" :
+    	window.location.href='../login.html';
+        break;
+    case "" :
+        window.location.href='../login.html';
+        break;
+    }
+}
+
+function changeLang(e) {
+	var lang = 'en'
+
+	switch(window.osType){
+    case "web" :
+        window.location.href='/main.do?lang='+lang;
+        break;
+    case "android" :
+    	window.location.href='/main.do?lang='+lang;
+        break;
+    case "ios" :
+    	window.location.href='/main.do?lang='+lang;
+        break;
+    case "" :
+        window.location.href='/main.do?lang='+lang;
+        break;
+    }
+}
+
+function moveSnsViewPage(flag){
+
+	var tUrl = "";
+	if(flag === 'snsFacebook') {
+		tUrl = "https://www.facebook.com/seoulbike";
+    } else {
+    	tUrl = "https://twitter.com/seoulbike";
+    }
+	switch(window.osType){
+	    case "web" :
+	    	window.open(tUrl,"_blank");
+	        break;
+	    case "android" :
+	        var pData = {targetUrl  :tUrl, returnFnc : "", title : "서울자전거sns" };
+	        window.android.openWebviewPopup(JSON.stringify(pData));
+	        break;
+	    case "ios" :
+	        var iosUrl = 'toApp://?{"targetUrl" : "'+tUrl+'","title" : "서울자전거sns", "returnFnc" : "", "call":"openWebviewPopup"}';
+	        window.location = iosUrl;
+	        break;
+    }
+}
+
+</script>
+</body>
+
+<!-- Mirrored from www.bikeseoul.com/info/infoReg.do by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Aug 2019 10:54:03 GMT -->
+</html>
